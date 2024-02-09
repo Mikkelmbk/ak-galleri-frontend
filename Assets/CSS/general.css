@@ -12,6 +12,7 @@
     --primary-theme-light-grey: rgba(39, 39, 39, 1);
     --primary-theme-dark-grey: rgba(27, 27, 27, 1);
     --primary-theme-light-blue: rgba(41, 142, 234, 1);
+    --primary-theme-dark-blue: rgb(9, 101, 187);
     --primary-theme-transparent-text: rgba(255, 255, 255, .7);
     --primary-theme-text: rgba(255, 255, 255, 1);
 
@@ -39,6 +40,14 @@ body{
 
 .l-flex--reverse{
     flex-direction: row;
+}
+
+.l-flex-form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    height:100%;
 }
 
 .l-grid{
