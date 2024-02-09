@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Galleri - Registrer</title>
+    <link rel="stylesheet" href="/assets/css/general.css">
+    <link rel="stylesheet" href="/assets/css/c-header.css">
+    <link rel="stylesheet" href="/assets/css/c-nav.css">
+    <link rel="stylesheet" href="/assets/css/c-auth.css">
+    <script defer src="/assets/js/global-utils.js"></script>
+    <script defer src="/assets/js/nav.js"></script>
+    <script defer src="/assets/js/search-submit.js"></script>
+</head>
+<body>
+    <header class="c-header">
+        <form class="c-header__form">
+            <input type="search" name="query" class="c-header__input" placeholder="Søg">
+        </form>
+    </header>
+    
+    <div class="l-flex">
+
+        <nav class="c-nav">
+            <ul class="c-nav__ul js-page-switcher l-flex l-flex--reverse">
+            </ul>
+        </nav>
+    
+        <main class="h-nav-spacing">
+
+            <div class="c-auth">
+                <h1 class="c-auth__headline">Opret en bruger</h1>
+                <form class="c-auth__form">
+                    <span class="c-auth__span">
+                        <label class="c-auth__label" for="username">Brugernavn:</label>
+                        <input class="c-auth__input" name="username" id="username" type="text" placeholder="Brugernavn" required>
+                    </span>
+                    <span class="c-auth__span">
+                        <label class="c-auth__label" for="password">Kode:</label>
+                        <input class="c-auth__input" name="password" id="password" type="password" placeholder="Kodeord" required>
+                    </span>
+                    <span class="c-auth__span">
+                        <label class="c-auth__label" for="adminAccoutSecret">Admin kode:</label>
+                        <input class="c-auth__input" name="adminAccoutSecret" id="adminAccoutSecret" type="text" placeholder="Admin kodeord" required>
+                    </span>
+                    <span class="c-auth__span">
+                        <button class="c-auth__button">Opret bruger</button>
+                    </span>
+                </form>
+                <p class="c-auth__server-response"></p>
+                <a href="/login" class="c-auth__button c-auth__button--reroute">Gå til Login side</a>
+            </div>
+            <!-- Content can be added here to appear above the grid display. -->
+            <!-- <div class="l-grid">
+            
+            </div> -->
+        </main>
+
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
