@@ -15,6 +15,9 @@
     --primary-theme-transparent-text: rgba(255, 255, 255, .7);
     --primary-theme-text: rgba(255, 255, 255, 1);
 
+    --primary-theme-form-width: 70%;
+    --primary-theme-form-max-width: 600px;
+
     --primary-desktop-navigation-width: 100px;
     --primary-desktop-header-height: 70px;
 
@@ -32,7 +35,6 @@ body{
 
 .l-flex{
     display: flex;
-    flex-direction: column;
 }
 
 .l-flex--reverse{
@@ -50,13 +52,10 @@ body{
 .h-nav-spacing{
     margin-top: var(--primary-mobile-navigation-height);
     width:100%;
+    min-height: calc(100vh - (var(--primary-mobile-navigation-height) + var(--primary-mobile-header-height))); /* enable to force div to grow to the bottom of the page. */
 }
 
 @media(min-width:768px){
-    .l-flex{
-        flex-direction: row;
-    }
-
     .l-flex--reverse{
         flex-direction: column;
     }
@@ -69,6 +68,6 @@ body{
         margin-top:unset;
         margin-left: var(--primary-desktop-navigation-width);
         width: calc(100% - var(--primary-desktop-navigation-width));
-        /* min-height: calc(100vh - var(--primary-desktop-header-height)); */ /* enable to force div to grow to the bottom of the page. */
+        min-height: calc(100vh - var(--primary-desktop-header-height));
     }
 }
