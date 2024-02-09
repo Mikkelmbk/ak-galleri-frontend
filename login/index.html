@@ -12,7 +12,7 @@
     <script defer src="/assets/js/global-utils.js"></script>
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/search-submit.js"></script>
-    <script defer src="/assets/js/register.js"></script>
+    <script defer src="/assets/js/login.js"></script>
 </head>
 <body>
     <header class="c-header">
@@ -33,7 +33,7 @@
             <div class="l-flex-form">
                 <form class="c-form">
                     <fieldset class="c-form__fieldset">
-                        <legend class="c-form__headline">Opret en bruger</legend>
+                        <legend class="c-form__headline">Log ind</legend>
                         <span class="c-form__span">
                             <label class="c-form__label" for="username">Brugernavn:</label>
                             <input class="c-form__input" name="username" id="username" type="text" placeholder="Brugernavn" required>
@@ -43,16 +43,12 @@
                             <input class="c-form__input" name="password" id="password" type="password" placeholder="Kodeord" required>
                         </span>
                         <span class="c-form__span">
-                            <label class="c-form__label" for="adminAccoutSecret">Admin kode:</label>
-                            <input class="c-form__input" name="adminAccoutSecret" id="adminAccoutSecret" type="text" placeholder="Admin kodeord" required>
-                        </span>
-                        <span class="c-form__span">
-                            <button class="c-form__button">Opret bruger</button>
+                            <button class="c-form__button">Log ind</button>
                         </span>
                     </fieldset>
                 </form>
                 <p class="c-form__server-response"></p>
-                <a href="/login" class="c-form__button c-form__button--reroute">Gå til Login side</a>
+                <a href="/register" class="c-form__button c-form__button--reroute">Gå til Bruger oprettelse</a>
             </div>
             <!-- Content can be added here to appear above the grid display. -->
             <!-- <div class="l-grid">
