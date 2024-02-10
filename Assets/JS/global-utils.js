@@ -1,3 +1,6 @@
+if(window.location.pathname === '/'){
+    window.location.replace('/home');
+}
 const bodyElem = document.querySelector("body");
 const swiperAnchorElem = document.querySelector(".js-swiper-anchor");
 
