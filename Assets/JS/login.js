@@ -1,11 +1,11 @@
 (async () => {
-    let cForm = document.querySelector('.c-form');
+    let cForm = document.querySelector('.js-form');
     cForm.addEventListener('submit', async (e)=>{
         e.preventDefault();
 
-        let cForm__inputUsername = cForm.querySelector('#username');
-        let cForm__inputPassword = cForm.querySelector('#password');
-        let cForm__serverResponse = cForm.querySelector(".c-form__server-response");
+        let cForm__inputUsername = cForm.querySelector('.js-input-username');
+        let cForm__inputPassword = cForm.querySelector('.js-input-password');
+        let cForm__serverResponse = cForm.querySelector(".js-server-response");
 
         try {
             const response = await fetch('http://localhost:3000/auth/user/login/',{
@@ -25,7 +25,7 @@
                     cForm__serverResponse.textContent = responseData.error;
                 }
                 else{
-                    cForm__serverResponse.textContent = "An unexpected error occurred.";
+                    cForm__serverResponse.textContent = "En uventet fejl opstod.";
                 }
             }
             else{
