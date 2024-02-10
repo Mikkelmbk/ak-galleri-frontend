@@ -2,7 +2,7 @@ let navUlElement = document.querySelector(".js-page-switcher");
 const navHTML = [
     {
         name : "Hjem",
-        href : "/"
+        href : "/home/"
     },
     {
         name : "Originaler",
