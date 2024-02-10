@@ -55,8 +55,6 @@
 .c-form__server-response{
     color: var(--primary-theme-text);
     text-align:center;
-    width:var(--primary-theme-form-width);
-    max-width: var(--primary-theme-form-max-width);
 }
 
 .c-form__button--reroute{
