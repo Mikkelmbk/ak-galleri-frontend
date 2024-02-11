@@ -30,7 +30,7 @@
             }
             else{
                 cForm__serverResponse.textContent = "";
-                window.location.replace('/admin/view/');
+                window.location.replace('/admin/');
             }
 
         } catch (error) {

@@ -3,6 +3,7 @@
     width:var(--primary-theme-form-width);
     display:flex;
     flex-direction:column;
+    color: var(--primary-theme-text);
 }
 
 .c-caption__headline{
