@@ -23,7 +23,7 @@
     list-style-type: none;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    color: var(--primary-theme-text);
+    color: unset;
 }
 
 body{
@@ -82,4 +82,10 @@ body{
         width: calc(100% - var(--primary-desktop-navigation-width));
         min-height: calc(100vh - var(--primary-desktop-header-height));
     }
+}
+
+.l-grid--admin{
+    width:unset;
+    max-width:400px;
+    grid-template-columns:unset;
 }
