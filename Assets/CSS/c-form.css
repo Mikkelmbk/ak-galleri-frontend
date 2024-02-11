@@ -1,10 +1,3 @@
-.c-form__headline{
-    color: var(--primary-theme-text);
-    padding:10px 0;
-    font-size:32px;
-    text-align:center;
-}
-
 .c-form{
     max-width: var(--primary-theme-form-max-width);
     width:var(--primary-theme-form-width);

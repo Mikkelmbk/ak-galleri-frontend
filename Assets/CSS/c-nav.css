@@ -5,6 +5,8 @@
     left:0;
     top:var(--primary-mobile-header-height);
     z-index:2;
+    max-height: var(--primary-mobile-navigation-height);
+    overflow: hidden;
 }
 
 .c-nav__ul{
@@ -40,5 +42,7 @@
         bottom:0;
         top: var(--primary-desktop-header-height);
         width: var(--primary-desktop-navigation-width);
+        max-height: unset;
+        overflow: unset;
     }
 }
