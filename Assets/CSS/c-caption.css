@@ -1,0 +1,32 @@
+.c-caption{
+    max-width: var(--primary-theme-form-max-width);
+    width:var(--primary-theme-form-width);
+    display:flex;
+    flex-direction:column;
+}
+
+.c-caption__headline{
+    padding:10px 0;
+    font-size:32px;
+    text-align:center;
+    font-weight:400;
+}
+
+.c-caption__headline--admin{
+    margin-top:30px;
+    font-size:40px;
+}
+
+.c-caption__paragraph{
+    text-align:center;
+}
+
+@media(min-width:768px){
+    .c-caption__headline{
+        font-size:50px;
+    }
+
+    .c-caption__paragraph{
+        font-size:22px;
+    }
+}

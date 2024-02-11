@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AK Galleri - Registrer</title>
+    <title>AK Galleri - Opret produkt</title>
     <link rel="stylesheet" href="/assets/css/general.css">
     <link rel="stylesheet" href="/assets/css/c-header.css">
     <link rel="stylesheet" href="/assets/css/c-nav.css">
     <link rel="stylesheet" href="/assets/css/c-form.css">
-    <link rel="stylesheet" href="/assets/css/c-caption.css">
     <script defer src="/assets/js/global-utils.js"></script>
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/search-submit.js"></script>
-    <script defer src="/assets/js/register.js"></script>
+    <script defer src="/assets/js/admin-access-validation.js"></script>
 </head>
 <body>
     <header class="c-header">
@@ -31,12 +30,10 @@
     
         <main class="h-nav-spacing">
 
-            <div class="l-flex l-flex--absolute-center">
-                <div class="c-caption">
-                    <h1 class="c-caption__headline">Opret en bruger</h1>
-                </div>
+            <div class="l-flex-form">
                 <form class="c-form js-form">
                     <fieldset class="c-form__fieldset">
+                        <!-- <legend class="c-form__headline">Opret en bruger</legend>
                         <span class="c-form__span">
                             <label class="c-form__label" for="username">Brugernavn:</label>
                             <input class="c-form__input js-input-username" name="username" id="username" type="text" placeholder="Brugernavn" required>
@@ -51,10 +48,10 @@
                         </span>
                         <span class="c-form__span">
                             <button class="c-form__button">Opret bruger</button>
-                        </span>
+                        </span> -->
                     </fieldset>
-                    <p class="c-form__server-response js-server-response"></p>
-                    <a href="/login" class="c-form__button c-form__button--reroute">Gå til Login side</a>
+                    <!-- <p class="c-form__server-response js-server-response"></p>
+                    <a href="/login" class="c-form__button c-form__button--reroute">Gå til Login side</a> -->
                 </form>
             </div>
             <!-- Content can be added here to appear above the grid display. -->

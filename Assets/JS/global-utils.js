@@ -1,4 +1,4 @@
-if(window.location.pathname === '/'){
+if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
     window.location.replace('/home');
 }
 const bodyElem = document.querySelector("body");
