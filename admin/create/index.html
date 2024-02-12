@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="/assets/css/general.css">
     <link rel="stylesheet" href="/assets/css/c-header.css">
     <link rel="stylesheet" href="/assets/css/c-nav.css">
+    <link rel="stylesheet" href="/assets/css/c-product.css">
     <link rel="stylesheet" href="/assets/css/c-form.css">
+    <link rel="stylesheet" href="/assets/css/c-caption.css">
     <script defer src="/assets/js/global-utils.js"></script>
     <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/search-submit.js"></script>
     <script defer src="/assets/js/admin-access-validation.js"></script>
+    <script defer src="/assets/js/product.js"></script>
+    <script defer src="/assets/js/admin-create.js"></script>
 </head>
 <body>
     <header class="c-header">
@@ -30,34 +34,58 @@
     
         <main class="h-nav-spacing">
 
-            <div class="l-flex-form">
+            
+            <!-- Content can be added here to appear above the grid display. -->
+            <div class="l-flex l-flex--absolute-center">
+
+                <div class="c-caption">
+                    <h1 class="c-caption__headline c-caption__headline--admin">Opret et enkelt produkt</h1>
+                </div>
+
+                <div class="l-grid l-grid--admin js-product-anchor">
+                </div>
+
                 <form class="c-form js-form">
                     <fieldset class="c-form__fieldset">
-                        <!-- <legend class="c-form__headline">Opret en bruger</legend>
                         <span class="c-form__span">
-                            <label class="c-form__label" for="username">Brugernavn:</label>
-                            <input class="c-form__input js-input-username" name="username" id="username" type="text" placeholder="Brugernavn" required>
+                            <label class="c-form__label" for="figcaption">Titel:</label>
+                            <input class="c-form__input js-input-figcaption" name="figcaption" id="figcaption" type="text" placeholder="Titel" required>
                         </span>
                         <span class="c-form__span">
-                            <label class="c-form__label" for="password">Kode:</label>
-                            <input class="c-form__input js-input-password" name="password" id="password" type="password" placeholder="Kodeord" required>
+                            <label class="c-form__label" for="description">Beskrivelse:</label>
+                            <input class="c-form__input js-input-description" name="description" id="description" type="text" placeholder="Beskrivelse" required>
                         </span>
                         <span class="c-form__span">
-                            <label class="c-form__label" for="adminAccoutSecret">Admin kode:</label>
-                            <input class="c-form__input js-input-adminAccoutSecret" name="adminAccoutSecret" id="adminAccoutSecret" type="text" placeholder="Admin kodeord" required>
+                            <label class="c-form__label" for="height">Højde:</label>
+                            <input class="c-form__input js-input-height" name="height" id="height" type="text" placeholder="Højde" required>
                         </span>
                         <span class="c-form__span">
-                            <button class="c-form__button">Opret bruger</button>
-                        </span> -->
+                            <label class="c-form__label" for="width">Bredde:</label>
+                            <input class="c-form__input js-input-width" name="width" id="width" type="text" placeholder="Bredde" required>
+                        </span>
+                        <span class="c-form__span">
+                            <label class="c-form__label" for="category">Kategori:</label>
+                            <select class="c-form__input js-input-category" name="category" id="category" type="text" placeholder="Kategori" required>
+                                <option value="Originals">Originaler</option>
+                                <option value="Guests">Gæster</option>
+                                <option value="Frames">Rammer</option>
+                            </select>
+                        </span>
+                        <span class="c-form__span">
+                            <label class="c-form__label" for="keywords">Søgeord:</label>
+                            <input class="c-form__input js-input-keywords" name="keywords" id="keywords" type="text" placeholder="Søge ord (komma separeret)">
+                        </span>
+                        <span class="c-form__span">
+                            <label class="c-form__label" for="imgUrl">Billede:</label>
+                            <input class="c-form__input c-form__input--file-upload js-input-imgUrl" name="imgUrl" id="imgUrl" type="file" placeholder="Billede" required>
+                        </span>
+                        <span class="c-form__span">
+                            <button class="c-form__button" type="submit">Opret produkt</button>
+                        </span>
                     </fieldset>
-                    <!-- <p class="c-form__server-response js-server-response"></p>
-                    <a href="/login" class="c-form__button c-form__button--reroute">Gå til Login side</a> -->
+                    <p class="c-form__server-response js-server-response"></p>
                 </form>
             </div>
-            <!-- Content can be added here to appear above the grid display. -->
-            <!-- <div class="l-grid">
-            
-            </div> -->
         </main>
 
     </div>

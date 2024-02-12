@@ -1,6 +1,6 @@
-function buildProducts(photos) {
+function buildProducts(products) {
     let productAnchorElement = document.querySelector(".js-product-anchor");
-    photos.forEach(photo => {
+    products.forEach(product => {
         const cProduct = document.createElement("div");
         const cProduct__figure = document.createElement("figure");
         const cProduct__image = document.createElement("img");
@@ -15,8 +15,8 @@ function buildProducts(photos) {
         cProduct__section.className = "c-product__content";
 
 
-        cProduct__image.src = photo.url;
-        cProduct__figcaption.textContent = photo.title;
+        cProduct__image.src = product.url || product.imgUrl;
+        cProduct__figcaption.textContent = product.title || product.figcaption;
 
 
         productAnchorElement.appendChild(cProduct);
