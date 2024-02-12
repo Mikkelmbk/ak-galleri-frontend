@@ -15,7 +15,7 @@
                 }
             });
             const responseData = await response.json();
-            if(response.status !== 201){
+            if(response.status !== 200){
                 if(responseData.error){
                     cForm__serverResponse.textContent = responseData.error;
                 }
@@ -29,7 +29,8 @@
             }
 
         } catch (error) {
-            window.location.replace('/home');
+            console.log(error);
+            // window.location.replace('/home');
         }
     })
 })();

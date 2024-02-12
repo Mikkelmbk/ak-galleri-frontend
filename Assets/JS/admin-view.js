@@ -15,7 +15,7 @@
                 }
             });
             const responseData = await response.json();
-            if(response.status !== 201){
+            if(response.status !== 200){
                 if(responseData.error){
                     cForm__serverResponse.textContent = responseData.error;
                 }
@@ -24,7 +24,7 @@
                 }
             }
             else{
-                buildProducts(responseData);
+                buildProducts([responseData]);
             }
 
         } catch (error) {

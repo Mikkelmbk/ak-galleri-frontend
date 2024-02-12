@@ -28,6 +28,10 @@
     font-size:16px;
 }
 
+.c-form__input--file-upload{
+    color: var(--primary-theme-text);
+}
+
 .c-form__button{
     text-align:center;
     background: var(--primary-theme-light-blue);
