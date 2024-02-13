@@ -1,5 +1,5 @@
 (async () => {
-    let cForm = document.querySelector('.js-form');
+    let cForm = document.querySelector('.js-form-delete');
     cForm.addEventListener('submit', async (e)=>{
         e.preventDefault();
 

@@ -1,10 +1,11 @@
 (async () => {
-    let cForm = document.querySelector('.js-form');
+    let cForm = document.querySelector('.js-form-view');
     cForm.addEventListener('submit', async (e)=>{
         e.preventDefault();
 
         let cForm__inputMongoId = cForm.querySelector('.js-input-mongoId');
-        let cForm__serverResponse = cForm.querySelector(".js-server-response");
+        let cForm__serverResponse = cForm.querySelector('.js-server-response');
+        let cProduct = document.querySelector('.js-product-anchor');
 
         try {
             const response = await fetch(`http://localhost:3000/products/product/${cForm__inputMongoId.value}`,{
@@ -24,6 +25,9 @@
                 }
             }
             else{
+                if(cProduct){
+                    cProduct.textContent = "";
+                }
                 buildProducts([responseData]);
             }
 
