@@ -1,13 +1,15 @@
 (async () => {
-    let cForm = document.querySelector('.js-form');
-    cForm.addEventListener('submit', async (e)=>{
+    let cFormView = document.querySelector('.js-form-view');
+    let cFormView__inputMongoId = cFormView.querySelector('.js-input-mongoId');
+    let cFormView__serverResponse = cFormView.querySelector('.js-server-response');
+    let cProduct = document.querySelector('.js-product-anchor');
+    
+    cFormView.addEventListener('submit', async (e)=>{
         e.preventDefault();
 
-        let cForm__inputMongoId = cForm.querySelector('.js-input-mongoId');
-        let cForm__serverResponse = cForm.querySelector(".js-server-response");
 
         try {
-            const response = await fetch(`http://localhost:3000/products/product/${cForm__inputMongoId.value}`,{
+            const response = await fetch(`http://localhost:3000/products/product/${cFormView__inputMongoId.value}`,{
                 method: 'GET',
                 credentials: 'include',
                 headers: {
@@ -17,18 +19,22 @@
             const responseData = await response.json();
             if(response.status !== 200){
                 if(responseData.error){
-                    cForm__serverResponse.textContent = responseData.error;
+                    cFormView__serverResponse.textContent = responseData.error;
                 }
                 else{
-                    cForm__serverResponse.textContent = "En uventet fejl opstod.";
+                    cFormView__serverResponse.textContent = "En uventet fejl opstod.";
                 }
             }
             else{
+                if(cProduct){
+                    cProduct.textContent = "";
+                }
                 buildProducts([responseData]);
+                cFormView__serverResponse.textContent = "";
             }
 
         } catch (error) {
-            window.location.replace('/home');
+            cFormView__serverResponse.textContent = "En uventet fejl opstod.";
         }
     })
 })();
