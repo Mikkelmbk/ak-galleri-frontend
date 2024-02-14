@@ -1,13 +1,13 @@
 (async () => {
-    let cForm = document.querySelector('.js-form-delete');
-    cForm.addEventListener('submit', async (e)=>{
+    let cFormDelete = document.querySelector('.js-form-delete');
+    let cFormDelete__inputMongoId = cFormDelete.querySelector('.js-input-mongoId');
+    let cFormDelete__serverResponse = cFormDelete.querySelector(".js-server-response");
+
+    cFormDelete.addEventListener('submit', async (e)=>{
         e.preventDefault();
 
-        let cForm__inputMongoId = cForm.querySelector('.js-input-mongoId');
-        let cForm__serverResponse = cForm.querySelector(".js-server-response");
-
         try {
-            const response = await fetch(`http://localhost:3000/products/delete/${cForm__inputMongoId.value}`,{
+            const response = await fetch(`http://localhost:3000/products/delete/${cFormDelete__inputMongoId.value}`,{
                 method: 'DELETE',
                 credentials: 'include',
                 headers: {
@@ -17,20 +17,18 @@
             const responseData = await response.json();
             if(response.status !== 200){
                 if(responseData.error){
-                    cForm__serverResponse.textContent = responseData.error;
+                    cFormDelete__serverResponse.textContent = responseData.error;
                 }
                 else{
-                    cForm__serverResponse.textContent = "En uventet fejl opstod.";
+                    cFormDelete__serverResponse.textContent = "En uventet fejl opstod.";
                 }
             }
             else{
-                cForm__serverResponse.textContent = "Produkt slettet.";
-                // window.location.replace('/login');
+                cFormDelete__serverResponse.textContent = "Produkt slettet.";
             }
 
         } catch (error) {
-            console.log(error);
-            // window.location.replace('/home');
+            cFormDelete__serverResponse.textContent = "En uventet fejl opstod.";
         }
     })
 })();
