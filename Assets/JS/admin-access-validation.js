@@ -1,6 +1,6 @@
 (async () => {
     try {
-        const accessStatus = await fetch('http://localhost:3000/auth/user/validate/',{
+        const accessStatus = await fetch('https://ak-galleri-backend.onrender.com/auth/user/validate/',{
             method: 'GET',
             credentials: 'include',
         });
