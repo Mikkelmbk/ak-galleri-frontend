@@ -8,7 +8,7 @@ const jsProductModalSectionElem = document.createElement('section');
 modalOverlayElem.className = "c-modal is-hidden";
 jsProductModalDivElem.className = "c-product c-product--modal js-product-modal";
 jsProductModalFigureElem.className = "c-product__figure";
-jsProductModalImageElem.className = "c-product__image";
+jsProductModalImageElem.className = "c-product__image c-product__image--modal";
 jsProductModalFigcaptionElem.className = "c-product__figcaption";
 jsProductModalSectionElem.className = "c-product__content";
 

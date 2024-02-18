@@ -49,6 +49,12 @@
     background-color: var(--primary-theme-dark-blue);
 }
 
+.c-form__button--disabled{
+    opacity:0.5;
+    pointer-events:none;
+    cursor:unset;
+}
+
 .c-form__server-response{
     color: var(--primary-theme-text);
     text-align:center;
