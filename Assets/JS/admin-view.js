@@ -3,13 +3,17 @@
     let cFormView__inputMongoId = cFormView.querySelector('.js-input-mongoId');
     let cFormView__serverResponse = cFormView.querySelector('.js-server-response');
     let cProduct = document.querySelector('.js-product-anchor');
-    
-    cFormView.addEventListener('submit', async (e)=>{
+    let cFormView__viewButton = cFormView.querySelector(".js-button-view");
+
+    cFormView.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        cFormView__serverResponse.textContent = "Arbejder på at vise produkt. Venter på svar fra serveren.";
+        cFormView__viewButton.classList.add('c-form__button--disabled');
+        cFormView__viewButton.disabled = true;
 
         try {
-            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/product/${cFormView__inputMongoId.value}`,{
+            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/product/${cFormView__inputMongoId.value}`, {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
@@ -17,26 +21,30 @@
                 }
             });
             const responseData = await response.json();
-            if(response.status !== 200){
-                if(responseData.error){
+            if (response.status !== 200) {
+                if (responseData.error) {
                     cFormView__serverResponse.textContent = responseData.error;
                 }
-                else{
+                else {
                     cFormView__serverResponse.textContent = "En uventet fejl opstod.";
                 }
             }
-            else{
-                if(cProduct){
+            else {
+                if (cProduct) {
                     cProduct.textContent = "";
                 }
                 buildProducts([responseData]);
                 cFormView__serverResponse.textContent = "";
             }
+            cFormView__viewButton.classList.remove('c-form__button--disabled');
+            cFormView__viewButton.disabled = false;
 
         } catch (error) {
             cFormView__serverResponse.textContent = "En uventet fejl opstod.";
+            cFormView__viewButton.classList.remove('c-form__button--disabled');
+            cFormView__viewButton.disabled = false;
         }
-    })
+    });
 })();
 
 // fetch("https://jsonplaceholder.typicode.com/photos")

@@ -18,6 +18,13 @@
 .c-product__image{
     width: 100%;
     display: block;
+    aspect-ratio: 1;
+    object-fit:contain;
+}
+
+.c-product__image--modal{
+    aspect-ratio: unset;
+    object-fit: unset;
 }
 
 .c-product__figcaption{
@@ -31,6 +38,7 @@
     width:80%;
     max-width:450px;
 }
+
 
 .c-product--modal:hover{
     transform:unset;
