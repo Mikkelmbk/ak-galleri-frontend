@@ -8,7 +8,7 @@
         let cForm__serverResponse = cForm.querySelector(".js-server-response");
 
         try {
-            const response = await fetch('http://localhost:3000/auth/user/login/',{
+            const response = await fetch('https://ak-galleri-backend.onrender.com/auth/user/login/',{
                 method: 'POST',
                 credentials: 'include',
                 headers: {

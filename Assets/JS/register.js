@@ -9,7 +9,7 @@
         let cForm__inputAdminAccountSecret = cForm.querySelector('.js-input-adminAccoutSecret');
 
         try {
-            const response = await fetch('http://localhost:3000/auth/user/register/',{
+            const response = await fetch('https://ak-galleri-backend.onrender.com/auth/user/register/',{
                 method: 'POST',
                 credentials: 'include',
                 headers: {

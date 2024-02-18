@@ -9,7 +9,7 @@
 
 
         try {
-            const response = await fetch(`http://localhost:3000/products/product/${cFormView__inputMongoId.value}`,{
+            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/product/${cFormView__inputMongoId.value}`,{
                 method: 'GET',
                 credentials: 'include',
                 headers: {

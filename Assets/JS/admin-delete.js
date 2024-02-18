@@ -7,7 +7,7 @@
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:3000/products/delete/${cFormDelete__inputMongoId.value}`,{
+            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/delete/${cFormDelete__inputMongoId.value}`,{
                 method: 'DELETE',
                 credentials: 'include',
                 headers: {

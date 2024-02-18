@@ -23,7 +23,7 @@
         formData.append("keywords", cFormCreate__inputKeywords.value.toLowerCase());
 
         try {
-            const response = await fetch('http://localhost:3000/products/validate/', {
+            const response = await fetch('https://ak-galleri-backend.onrender.com/products/validate/', {
                 method: 'POST',
                 credentials: 'include',
                 body: formData
@@ -39,7 +39,7 @@
             }
             else {
                 formData.append("imgUrl", cFormCreate__inputImgUrl.files[0]); // validation fetch response succeeded, which means all of the product information are allowed to pass. Adding imgUrl to the formData and calling the add route to create the product.
-                const response = await fetch('http://localhost:3000/products/add/', {
+                const response = await fetch('https://ak-galleri-backend.onrender.com/products/add/', {
                     method: 'POST',
                     credentials: 'include',
                     body: formData
