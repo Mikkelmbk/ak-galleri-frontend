@@ -1,6 +1,12 @@
 if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
     window.location.replace('/home');
 }
+
+let productTileId = new URLSearchParams(window.location.search).get('admin');
+if(window.location.pathname.includes('/admin')){
+    productTileId = 'enabled';
+}
+
 const bodyElem = document.querySelector("body");
 const swiperAnchorElem = document.querySelector(".js-swiper-anchor");
 

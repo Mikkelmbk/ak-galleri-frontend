@@ -3,6 +3,7 @@
     padding:10px;
     transition: all .3s ease;
     height:100%;
+    color: var(--primary-theme-transparent-text);
 }
 
 .c-product:hover{
@@ -22,14 +23,32 @@
     object-fit:contain;
 }
 
+.c-product__description{
+    text-align:center;
+    margin-top:10px;
+}
+
+.c-product__dimension-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:10px;
+}
+
+.c-product__product-tile-id{
+    /* color: var(--primary-theme-transparent-text); */
+    text-align:center;
+    margin-top:10px;
+}
+
 .c-product__image--modal{
     aspect-ratio: unset;
     object-fit: unset;
 }
 
 .c-product__figcaption{
-    color: var(--primary-theme-transparent-text);
-    padding: 15px 0;
+    /* color: var(--primary-theme-transparent-text); */
+    /* padding: 15px 0; */
+    margin-top:10px;
     font-weight:bold;
 }
 
