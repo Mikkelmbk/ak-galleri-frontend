@@ -81,6 +81,9 @@ function swiperTemplate(products, jsSliderName, heading) {
         }
 
     });
+
+    swiperInit(jsSliderName);
+
 }
 // swiperInit handles initializing the slider after the HTML structure has been built.
 function swiperInit(jsSliderName) {
