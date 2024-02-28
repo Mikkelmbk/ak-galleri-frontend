@@ -1,12 +1,12 @@
-fetch("https://jsonplaceholder.typicode.com/photos")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    const photos = data.slice(10, 20);
-    swiperTemplate(photos, "js-frames-slider","Nye Rammer");
-  })
-  .then(()=> {
-    swiperInit("js-frames-slider");
-  })
+(async () =>{
+    const response = await fetch(`https://ak-galleri-backend.onrender.com/products/slider/frames`, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    const responseData = await response.json();
+    swiperTemplate(responseData, "js-frames-slider","Nye Rammer");
+})();
 
