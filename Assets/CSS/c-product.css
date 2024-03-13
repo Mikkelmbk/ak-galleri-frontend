@@ -41,8 +41,9 @@
 }
 
 .c-product__image--modal{
-    aspect-ratio: unset;
-    object-fit: unset;
+    /* Following rules are disabled as it causes issues on smaller screens. */
+    /* aspect-ratio: unset;
+    object-fit: unset; */
 }
 
 .c-product__figcaption{
@@ -55,7 +56,7 @@
 .c-product--modal{
     height:auto;
     width:80%;
-    max-width:450px;
+    max-width:560px;
 }
 
 
@@ -65,8 +66,8 @@
     cursor:unset;
 }
 
-@media(min-width:768px){
+/* @media(min-width:768px){
     .c-product--modal{
-        max-width: 525px;
+        max-width: 560px;
     }
-}
+} */
