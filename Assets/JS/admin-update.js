@@ -36,7 +36,7 @@
         formData.append("keywords", cFormUpdate__inputKeywords.value.toLowerCase());
 
         try {
-            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/update/${cFormUpdate__mongoIdToUpdate}`, {
+            const response = await fetch(`${BASE_ENDPOINT}/products/update/${cFormUpdate__mongoIdToUpdate}`, {
                 method: 'PATCH',
                 credentials: 'include',
                 body: formData
@@ -84,7 +84,7 @@
         cFormFind__findButton.disabled = true;
 
         try {
-            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/product/${cFormFind__inputMongoId.value}`, {
+            const response = await fetch(`${BASE_ENDPOINT}/products/product/${cFormFind__inputMongoId.value}`, {
                 method: 'GET',
                 credentials: 'include',
                 headers: {

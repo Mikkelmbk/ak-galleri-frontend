@@ -1,4 +1,4 @@
-if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '/home/index.html') {
     window.location.replace('/home');
 }
 
@@ -9,6 +9,7 @@ if (window.location.pathname.includes('/admin')) {
 
 const bodyElem = document.querySelector("body");
 const swiperAnchorElem = document.querySelector(".js-swiper-anchor");
+const BASE_ENDPOINT = "https://ak-galleri-backend.onrender.com";
 
 // swiperTemplate handles building the HTML structure required prior to slider initialization.
 function swiperTemplate(products, jsSliderName, heading) {
