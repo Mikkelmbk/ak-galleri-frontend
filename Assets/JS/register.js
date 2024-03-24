@@ -15,7 +15,7 @@
         cForm__registerButton.disabled = true;
 
         try {
-            const response = await fetch('https://ak-galleri-backend.onrender.com/auth/user/register/', {
+            const response = await fetch(`${BASE_ENDPOINT}/auth/user/register/`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {

@@ -1,5 +1,5 @@
 (async () =>{
-    const response = await fetch(`https://ak-galleri-backend.onrender.com/products/slider/frames`, {
+    const response = await fetch(`${BASE_ENDPOINT}/products/slider/frames`, {
         method: 'GET',
         credentials: 'include',
         headers: {

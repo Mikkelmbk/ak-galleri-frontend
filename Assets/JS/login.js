@@ -15,7 +15,7 @@
 
 
         try {
-            const response = await fetch('https://ak-galleri-backend.onrender.com/auth/user/login/', {
+            const response = await fetch(`${BASE_ENDPOINT}/auth/user/login/`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {

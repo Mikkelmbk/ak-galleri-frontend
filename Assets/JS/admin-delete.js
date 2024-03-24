@@ -14,7 +14,7 @@
         cFormDelete__deleteButton.disabled = true;
 
         try {
-            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/delete/${cFormDelete__inputMongoId.value}`, {
+            const response = await fetch(`${BASE_ENDPOINT}/products/delete/${cFormDelete__inputMongoId.value}`, {
                 method: 'DELETE',
                 credentials: 'include',
                 headers: {

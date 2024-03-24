@@ -13,7 +13,7 @@
         cFormView__viewButton.disabled = true;
 
         try {
-            const response = await fetch(`https://ak-galleri-backend.onrender.com/products/product/${cFormView__inputMongoId.value}`, {
+            const response = await fetch(`${BASE_ENDPOINT}/products/product/${cFormView__inputMongoId.value}`, {
                 method: 'GET',
                 credentials: 'include',
                 headers: {

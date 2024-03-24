@@ -1,6 +1,6 @@
 (async () => {
     try {
-        const accessStatus = await fetch('https://ak-galleri-backend.onrender.com/auth/user/validate/',{
+        const accessStatus = await fetch(`${BASE_ENDPOINT}/auth/user/validate/`,{
             method: 'GET',
             credentials: 'include',
         });
